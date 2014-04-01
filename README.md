@@ -12,21 +12,23 @@ $('.select').selectPreview();
 
 ```html
 <select class="select" name="select">
-  <option value="http://mkalty.org/wp-content/uploads/2014/03/Animals_Cats_Small_cat_005241_.jpg"> Nice cat</option><br>
+  <option value="http://mkalty.org/wp-content/uploads/2014/03/Animals_Cats_Small_cat_005241_.jpg"> Nice cat</option>
   <option value="http://4.bp.blogspot.com/-BuWMwQI4u_0/UIUQjhKFsbI/AAAAAAAAHnw/bvGi3VE2bLo/s640/cats_animals_desktop_2560x1600_hd-wallpaper-749539.jpeg"> Nice cat2</option>
   <option value="http://mkalty.org/wp-content/uploads/2014/03/cats_animals_kittens_cat_kitten_cute_desktop_1680x1050_hd-wallpaper-753974.jpeg"> Nice cat3</option>
   <option value="not an image"> not an image </option>
 </select>
 ```
-Demo: <a href="">Simple Init</a><br>
+Demo: <a href="http://jsfiddle.net/JYtc6/">Simple Init</a><br>
 
 
 <strong>Init with options :</strong>
 ```javascript
 $('.select').selectPreview({
-  imgBGColor :  red,
+  imgBGColor :  "red",
   showImg : true,
-  showText : true
+  showText : true,
+  prevWinImgWidth : "150px",
+  prevWinImgHeight : "150px"
 });
 ```
 ```html
