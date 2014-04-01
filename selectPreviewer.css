@@ -58,7 +58,7 @@
     margin:0;
 }
 
-.previewerOption .optionLeft{float:left; width:95%;}
+.previewerOption .optionLeft{float:left; width:100%;}
 
 .previewerWrap .previewerOption img{
     width: 20px;
