@@ -1,5 +1,5 @@
 .previewerWrap{ position: relative; }
-.previewerWrap .loader{width:29%;float: right; background-color:white; margin-right: -10px;}
+.previewerWrap .loader{width:29%;float: right; background-color:white; margin-right: -10px; position:absolute;}
 .previewerWrap .displayNone{display: none;}
 .previewerWrap .prevWinHolder{
     position: absolute;
@@ -58,7 +58,7 @@
     margin:0;
 }
 
-.previewerOption .optionLeft{float:left; width:69%;}
+.previewerOption .optionLeft{float:left; width:95%;}
 
 .previewerWrap .previewerOption img{
     width: 20px;
