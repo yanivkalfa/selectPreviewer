@@ -73,7 +73,7 @@ $('.select').selectPreview({
   <option value="not an image"> not an image </option>
 </select>
 ```
-Demo: <a href="http://jsfiddle.net/JYtc6/1/">Init with options</a><br>
+Demo: <a href="http://jsfiddle.net/JYtc6/2/">Init with options</a><br>
 
 <strong>you have the following methods available:</strong><br>
 optEnter : accept no variable and is called when you enter an option. you can use this as reference to the option<br>
