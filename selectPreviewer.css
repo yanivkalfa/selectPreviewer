@@ -1,0 +1,89 @@
+
+.previewerWrap{ position: relative; }
+.previewerWrap .loader{width:29%;float: right; background-color:white; margin-right: -10px;}
+.previewerWrap .displayNone{display: none;}
+.previewerWrap .prevWinHolder{
+    position: absolute;
+    z-index: 999999;
+    padding:10px;
+    width:0;
+    height:0;
+}
+.previewerWrap .prevIFrame{ position:absolute;border:none; background-color: white;}
+.previewerWrap .prevImgHold{position:absolute; border:none;}
+.previewerWrap .bgBorderShadow{position:absolute; opacity: 0.7; background-color: black; margin:-10px;}
+
+.previewerWrap .imgHolder{ max-width:0; max-height:0;}
+.previewerWrap .imgHolder img{ max-width:0; max-height:0;}
+.previewerWrap .clear{clear:both;}
+.previewerWrap .previewerSelect{
+    color:black;
+    font-size: 12px;
+    border: 1px solid gray;
+    float:left;
+}
+
+.previewerSelect .previewerSelectedOption{
+    float:left;
+    padding: 2px 10px 2px 10px;
+}
+
+.previewerSelect .previewerArrow{
+    float:left;
+    padding:2px;
+    border-left: 1px solid white;
+}
+
+.previewerWrap .state-hover {
+    border-color: #3998D5;
+}
+
+.previewerWrap ul.previewerClosed{display:none;}
+.previewerWrap ul.previewerOpened{}
+.previewerWrap ul.previewerOptionsWrap{
+    padding: 0;
+    margin: 0;
+    float: left;
+    border: 1px solid grey;
+    list-style: none;
+    position:absolute;
+    z-index: 99999;
+    background-color: white;
+}
+
+.previewerWrap .previewerOption{
+    color:black;
+    padding: 0 10px;
+    background-color: white;
+    clear:both;
+    margin:0;
+}
+
+.previewerOption .optionLeft{float:left; width:69%;}
+
+.previewerWrap .previewerOption img{
+    width: 20px;
+    height: 20px;
+    border:none;
+    float:left;
+    margin-right:10px;
+}
+
+.previewerWrap .previewerOption .opText{
+    float:left;
+}
+
+.previewerWrap ul.previewerOptionsWrap li.selected{
+    color:white !important;
+    background-color: #3ea7f0 !important;
+}
+
+.previewerWrap ul.previewerOptionsWrap li.disabled{
+    color:lightgrey;
+}
+
+.el_over_ws {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
