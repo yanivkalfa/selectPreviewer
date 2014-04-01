@@ -41,7 +41,7 @@ $('.select').selectPreview({
 ```
 Demo: <a href="http://jsfiddle.net/JYtc6/3/">Init with options</a><br>
 
-<strong>you have the following options available:</strong>
+<strong>you have the following options available:</strong><br>
 imgBGColor : (String) css color value {black | #3h38s} (defualt : black).<br>
 showImg" :  (Boolean) display image icon in options? (defualt : true).<br>
 showText" : (Boolean) display text in option? (defualt : false).<br>
