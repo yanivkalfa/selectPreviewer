@@ -1,4 +1,3 @@
-```javascript
 /*
  * @ jQuery plugin app
  */
@@ -367,4 +366,3 @@
         });
     };
 })(jQuery);
-```
