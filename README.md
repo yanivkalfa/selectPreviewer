@@ -39,7 +39,7 @@ $('.select').selectPreview({
   <option value="not an image"> not an image </option>
 </select>
 ```
-Demo: <a href="http://jsfiddle.net/JYtc6/1/">Init with options</a><br>
+Demo: <a href="http://jsfiddle.net/JYtc6/3/">Init with options</a><br>
 
 <strong>you have the following options available:</strong>
 imgBGColor : (String) css color value {black | #3h38s} (defualt : black).<br>
