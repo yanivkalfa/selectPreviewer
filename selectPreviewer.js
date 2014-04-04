@@ -73,8 +73,8 @@
                                 "type" : ""
                             });
 
-                            a = $('<a>', { href:oNode.value } )[0];
-                            if(typeof a.hostname !== "undefined"  && a.hostname !="" && a.hostname != siteHostName){
+                            a = s.oFns.urlParser(oNode.value);
+                            if(typeof a.host !== "undefined"  && a.host !="" && typeof a.path !== "undefined"  && a.path !=""){
                                 img = $('<img src="' + oNode.value + '" />');
                                 s.oBinds.imgHolder.append(img);
                                 img.error (function(){
@@ -356,6 +356,40 @@
                             left: x + 'px',
                             top: y + 'px'
                         });
+                    },
+                    urlParser : function(str) {
+                        this.s = function  (str) {
+                            var	o   = this.s.options,
+                                m   = o.parser[o.strictMode ? "strict" : "loose"].exec(str),
+                                uri = {},
+                                i   = 14;
+
+                            while (i--) uri[o.key[i]] = m[i] || "";
+
+                            uri[o.q.name] = {};
+                            uri[o.key[12]].replace(o.q.parser, function ($0, $1, $2) {
+                                if ($1) uri[o.q.name][$1] = $2;
+                            });
+
+                            return uri;
+                        };
+
+                        this.s.options = {
+                            strictMode: false,
+                            key: ["source","protocol","authority","userInfo","user","password","host","port","relative","path","directory","file","query","anchor"],
+                            q:   {
+                                name:   "queryKey",
+                                parser: /(?:^|&)([^&=]*)=?([^&]*)/g
+                            },
+                            parser: {
+                                strict: /^(?:([^:\/?#]+):)?(?:\/\/((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?))?((((?:[^?#\/]*\/)*)([^?#]*))(?:\?([^#]*))?(?:#(.*))?)/,
+                                loose:  /^(?:(?![^:@]+:[^:@\/]*@)([^:\/?#.]+):)?(?:\/\/)?((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?)(((\/(?:[^?#](?![^?#\/]*\.[^?#\/.]+(?:[?#]|$)))*\/?)?([^?#\/]*))(?:\?([^#]*))?(?:#(.*))?)/
+                            }
+                        };
+
+                        this.s.options.strictMode = true;
+
+                        return this.s(str);
                     }
                 }
             };
