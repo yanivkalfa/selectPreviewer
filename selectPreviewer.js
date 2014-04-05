@@ -177,13 +177,13 @@
                         s.oBinds.selectCopy.append(previewerSelect);
                         arrow = $('<span class="previewerArrow state-normal">&#9660;</span>');
                         previewerSelect.append(arrow, clear.clone(true));
-                        selectedOption = $('<span class="previewerSelectedOption el_over_ws"></span>').width(s.oVars.sourceSelect.style.width-arrow.width());
+                        selectedOption = $('<span class="previewerSelectedOption el_over_ws"></span>').width(s.oVars.sourceSelect.style.width-arrow.outerWidth());
                         if(typeof s.oVars.sourceSelect.options[selectedId] !== "undefined"){
                             selectedOption.text(s.oVars.sourceSelect.options[selectedId].innerHTML);
                         }
                         previewerSelect.prepend(selectedOption);
                         s.oBinds.prevWinHolder.append(s.oBinds.bgBorderShadow);
-                        s.oBinds.selectCopy.append(clear.clone(true), ul.width(previewerSelect.width()), s.oBinds.prevWinHolder);
+                        s.oBinds.selectCopy.append(clear.clone(true), ul, s.oBinds.prevWinHolder);
                         s.oBinds.selectCopy.width(previewerSelect.outerWidth());
                     },
 
