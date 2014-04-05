@@ -71,7 +71,7 @@
 .previewerWrap .previewerOption .opText{
     float:left;
     color: black;
-    max-width:75%;
+     max-width: 75%;
 }
 
 .previewerWrap ul.previewerOptionsWrap li.selected{
